@@ -27,15 +27,15 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Planning a trip usually means juggling half a dozen browser tabs — one for flights, another for hotels, a third for the weather, and a notes app where you try to fit it all into a sensible order. TravelBrain collapses that into a single conversation. You describe the trip you want in your own words, the way you'd describe it to a friend — *"Plan a 10 day Europe trip from India in April, mid-range budget"* — and a team of AI specialists goes and researches it. One looks into flights, another finds places to stay, another checks what the weather will be doing while you're there. Their findings are then pulled together into a single plan you can actually act on, complete with a day-by-day schedule and a cost estimate. The result is a trip plan in about a minute, rather than an afternoon of research. Each part of the trip gets its own attention:
+Planning a trip usually means juggling half a dozen browser tabs — one for flights, another for hotels, a third for the weather, and a notes app where you try to fit it all into a sensible order. TravelBrain collapses that into a single conversation. You describe the trip you want in your own words, the way you'd describe it to a friend — _"Plan a 10 day Europe trip from India in April, mid-range budget"_ — and a team of AI specialists goes and researches it. One looks into flights, another finds places to stay, another checks what the weather will be doing while you're there. Their findings are then pulled together into a single plan you can actually act on, complete with a day-by-day schedule and a cost estimate. The result is a trip plan in about a minute, rather than an afternoon of research. Each part of the trip gets its own attention:
 
-| | |
-|---|---|
-| ✈️ **Flights** | Likely airports, airlines on the route, typical duration and fare range |
-| 🏨 **Hotels** | Accommodation options matched to your destination and budget |
-| 🌤️ **Weather** | Current conditions and the forecast, with travel advice |
-| 🗺️ **Itinerary** | A realistic day-by-day plan you can actually follow |
-| 💰 **Budget** | An estimated breakdown of what the trip will cost |
+|                  |                                                                         |
+| ---------------- | ----------------------------------------------------------------------- |
+| ✈️ **Flights**   | Likely airports, airlines on the route, typical duration and fare range |
+| 🏨 **Hotels**    | Accommodation options matched to your destination and budget            |
+| 🌤️ **Weather**   | Current conditions and the forecast, with travel advice                 |
+| 🗺️ **Itinerary** | A realistic day-by-day plan you can actually follow                     |
+| 💰 **Budget**    | An estimated breakdown of what the trip will cost                       |
 
 Plans are saved as you go, so you can reopen a trip later and ask follow-up
 questions without starting over.
@@ -63,7 +63,7 @@ You'll need the following before you start:
 Clone the repository and move into it:
 
 ```bash
-git clone https://github.com/KalyanM45/TravelBrain-Multi-Agent-AI-Travel-Planner.git
+git clone https://github.com/
 cd TravelBrain-Multi-Agent-AI-Travel-Planner
 ```
 
@@ -91,14 +91,14 @@ GROQ_MODEL=openai/gpt-oss-20b
 
 Here's what each one is for:
 
-| Variable | Required | What it's for |
-|---|:---:|---|
-| `GROQ_API_KEY` | ✅ | Powers the AI planning |
-| `DATABASE_URL` | ✅ | Saves your trips so you can return to them |
-| `TAVILY_API_KEY` | ✅ | Hotel search |
-| `AVIATIONSTACK_API_KEY` | ✅ | Airport and airline information |
-| `OPENWEATHER_API_KEY` | ✅ | Weather and forecasts |
-| `GROQ_MODEL` | ❌ | Switch the AI model without editing any code |
+| Variable                | Required | What it's for                                |
+| ----------------------- | :------: | -------------------------------------------- |
+| `GROQ_API_KEY`          |    ✅    | Powers the AI planning                       |
+| `DATABASE_URL`          |    ✅    | Saves your trips so you can return to them   |
+| `TAVILY_API_KEY`        |    ✅    | Hotel search                                 |
+| `AVIATIONSTACK_API_KEY` |    ✅    | Airport and airline information              |
+| `OPENWEATHER_API_KEY`   |    ✅    | Weather and forecasts                        |
+| `GROQ_MODEL`            |    ❌    | Switch the AI model without editing any code |
 
 Your `.env` file is ignored by Git. Never commit real keys.
 
@@ -109,7 +109,7 @@ uv run python app.py
 ```
 
 Open **<http://127.0.0.1:8000>** in your browser. If you see the planner with a
-green *API connected* dot at the bottom of the sidebar, you're ready to go.
+green _API connected_ dot at the bottom of the sidebar, you're ready to go.
 
 ## 🎈 Usage <a name="usage"></a>
 
@@ -153,9 +153,10 @@ Your results are split into tabs so you can jump straight to what you need:
 <details>
 <summary><b>The page loads but planning fails</b></summary>
 
-Check the status indicator at the bottom of the sidebar. If it says *API
-unreachable*, the app has stopped — restart it with `uv run python app.py`.
+Check the status indicator at the bottom of the sidebar. If it says _API
+unreachable_, the app has stopped — restart it with `uv run python app.py`.
 Otherwise, check the terminal you started the app in for the error.
+
 </details>
 
 <details>
@@ -169,6 +170,7 @@ curl -s https://api.groq.com/openai/v1/models \
 ```
 
 Pick one from the list and set it as `GROQ_MODEL` in your `.env` file.
+
 </details>
 
 <details>
@@ -176,6 +178,7 @@ Pick one from the list and set it as `GROQ_MODEL` in your `.env` file.
 
 The app needs a PostgreSQL database to save your trips. Add a connection string
 to your `.env` file — see [Installing](#getting_started).
+
 </details>
 
 <details>
@@ -183,6 +186,7 @@ to your `.env` file — see [Installing](#getting_started).
 
 This is expected. Several specialists research your trip in turn, and each step
 involves live data and AI calls. 30–90 seconds is normal.
+
 </details>
 
 ## 🤝 Contributing <a name = "contributing"></a>
