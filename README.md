@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center">TravelBrain</h1>
 
 <p align="center">
@@ -243,3 +244,7 @@ any error output from the terminal.
 ---
 
 Licensed under the **GNU General Public License v3.0**. See [LICENSE](LICENSE).
+=======
+# TravelBrain-AI-Travel-Planner
+Multi-agent AI travel planner for flights, hotels, weather, and personalized itineraries.
+>>>>>>> 71afac9bb558281d5bb5066d1bf51d9ee00ceaae
